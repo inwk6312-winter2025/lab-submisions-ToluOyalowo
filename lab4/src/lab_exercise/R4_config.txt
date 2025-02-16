@@ -1,0 +1,15 @@
+hostname R4
+
+interface Loopback0
+ ip address 150.1.4.4/32
+
+
+interface G1.14
+ ip address 155.1.14.4/24
+
+
+router ospf 1
+ network 150.1.4.4/32 0.0.0.0 area 0
+
+ network 155.1.14.4 0.0.0.255 area 0
+

@@ -1,0 +1,16 @@
+hostname {{ hostname }}
+
+interface Loopback0
+ ip address {{ loopback }}
+
+{% for interface in interfaces %}
+interface {{ interface.name }}
+ ip address {{ interface.ip }}
+{% endfor %}
+
+router ospf 1
+ network {{ loopback }} 0.0.0.0 area 0
+{% for interface in interfaces %}
+ network {{ interface.ip.split('/')[0] }} 0.0.0.255 area 0
+{% endfor %}
+

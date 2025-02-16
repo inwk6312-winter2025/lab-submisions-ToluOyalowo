@@ -1,0 +1,25 @@
+hostname R1
+
+interface Loopback0
+ ip address 150.1.1.1/32
+
+
+interface G1.12
+ ip address 155.1.12.1/24
+
+interface G1.13
+ ip address 155.1.13.1/24
+
+interface G1.14
+ ip address 155.1.14.1/24
+
+
+router ospf 1
+ network 150.1.1.1/32 0.0.0.0 area 0
+
+ network 155.1.12.1 0.0.0.255 area 0
+
+ network 155.1.13.1 0.0.0.255 area 0
+
+ network 155.1.14.1 0.0.0.255 area 0
+

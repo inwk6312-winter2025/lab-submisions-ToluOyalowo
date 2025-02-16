@@ -1,0 +1,9 @@
+Value Required PROTOCOL (\S+)
+Value NETWORK (\d+\.\d+\.\d+\.\d+\/\d+)
+Value NEXTHOP (\d+\.\d+\.\d+\.\d+)
+Value METRIC (\d+)
+Value INTERFACE (\S+)
+
+Start
+  ^${PROTOCOL}\s+${NETWORK}\s+\[${METRIC}/\d+\]\s+via\s+${NEXTHOP},\s+\S+,\s+${INTERFACE} -> Record
+
