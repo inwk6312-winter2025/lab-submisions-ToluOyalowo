@@ -1,0 +1,23 @@
+routers:
+        router1:
+                management_ip: "192.168.1.101"
+                interfaces:
+                        G0/2: "192.168.2.101/24"
+                        G0/3: "192.168.3.101/24"
+        router2:
+                management_ip: "192.168.1.102"
+                interfaces:                
+                        G0/2: "192.168.2.102/24"
+                        G0/3: "192.168.3.102/24"
+        router3:
+                 management_ip: "192.168.1.103"
+                 interfaces:
+                         G0/2: "192.168.2.103/24"
+                         G0/3: "192.168.3.103/24"
+        router4:
+                management_ip: "192.168.1.104"
+                interfaces:
+                        G0/2: "192.168.2.104/24"
+                        G0/3: "192.168.3.104/24"
+
+                        
